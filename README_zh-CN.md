@@ -3,17 +3,20 @@
 **[English README](README.md)**
 
 本项目复刻自[LanServerProperties](https://github.com/rikka0w0/LanServerProperties)
-所有内容均为AI生成
+
+**所有内容均为AI生成**
+
+---
 
 本模组为 Minecraft 原版"对局域网开放"（LAN）界面（即新版中的"多人游戏选项"界面）增加更多服务器设置项。
 
-下载：[CurseForge](https://www.curseforge.com/minecraft/mc-mods/lan-server-properties/) · [Modrinth](https://modrinth.com/mod/P7dR8mSH) · [GitHub Releases](https://github.com/rikka0w0/LanServerProperties/releases)
+下载：[GitHub Releases](https://github.com/smlBone/LanServerProperties/releases)
 
 ## 功能特性
 
 安装本模组后，原版局域网界面可以额外做到：
 
-* 自定义**端口**（不再使用随机端口）。
+* 自定义**端口**。
 * **关闭 PvP**。
 * **关闭正版验证（离线模式）**，让未购买 Minecraft 的玩家也能加入局域网服务器。
 * 服务器**已发布后**，仍可从同一界面修改其设置。
