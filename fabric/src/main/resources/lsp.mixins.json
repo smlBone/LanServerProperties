@@ -6,13 +6,9 @@
   "mixins": [
   ],
   "client": [
-    "MixinOpenToLanScreen",
-    "MixinUUIDUtil",
-    "PlayerListAccessor",
-    "WidgetHeightAccessor",
-    
-    "MixinOpenToLanScreenFabric",
-    "MixinPauseScreen"
+    "MixinMultiplayerOptionsScreen",
+    "MixinIntegratedServer",
+    "MixinUUIDUtil"
   ],
   "injectors": {
     "defaultRequire": 1

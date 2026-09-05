@@ -1,24 +1,27 @@
 package rikka.lanserverproperties;
 
 import net.minecraft.client.server.IntegratedServer;
-import net.minecraft.server.players.PlayerList;
-import rikka.lanserverproperties.mixin.PlayerListAccessor;
 
 public class LanServerProperties {
 	/**
-	 *  Called by the mod, should be consistent in all implementations.
+	 * The vanilla 26.x integrated server hard-codes its player limit to 8
+	 * (IntegratedServer#getMaxPlayers). This mod therefore stores the value
+	 * chosen by the player here, and MixinIntegratedServer makes the server
+	 * report it.
+	 */
+	private static int configuredMaxPlayers = -1;
+
+	/**
+	 * Called by the configuration UI when the settings are applied.
 	 */
 	public static void setMaxPlayers(IntegratedServer server, int num) {
-		PlayerList playerList = server.getPlayerList();
-		((PlayerListAccessor)playerList).setMaxPlayers(num);
+		configuredMaxPlayers = num;
 	}
 
 	/**
-	 * These are the lambda names used for Mixin injection, should be consistent in all implementations.
+	 * @return the player limit requested by this mod, or -1 to keep vanilla behaviour
 	 */
-	// m_279789_(Lnet/minecraft/client/server/IntegratedServer;Lnet/minecraft/client/gui/components/Button;)V
-	public static final String mixin_startButton_OnClick = "method_19851";
-
-	// m_257075_(Lnet/minecraft/client/gui/components/Button;Ljava/lang/String;)V
-	public static final String mixin_portEditBox_OnChange = "method_47416";
+	public static int getConfiguredMaxPlayers() {
+		return configuredMaxPlayers;
+	}
 }

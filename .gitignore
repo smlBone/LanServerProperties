@@ -5,7 +5,6 @@
 *.classpath
 *.project
 *.prefs
-*.launch
 /output
 
 #ForgeGradle
@@ -25,3 +24,5 @@ out/
 # Neoforge
 runs/
 
+#
+.workbuddy
